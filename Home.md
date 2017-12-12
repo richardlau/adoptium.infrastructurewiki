@@ -6,7 +6,7 @@ Welcome to the openjdk-infrastructure wiki!
 # Our Infrastructure
 
 * [Infrastructure Providers](https://adoptopenjdk.net/sponsors.html) (External Link)
-* [[Build Machines]]
+* [Build Machines](https://github.com/AdoptOpenJDK/openjdk-infrastructure/blob/master/docs/adoptopenjdk.pdf)
 
 # Nagios Monitoring
 
