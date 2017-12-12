@@ -22,6 +22,5 @@ Welcome to the openjdk-infrastructure wiki!
 
 # Work In Progress (WIP) Documents:
 
-* [[Administration]]
 * [[Temporary admin access to build machines]]
 
