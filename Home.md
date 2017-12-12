@@ -6,6 +6,7 @@ Welcome to the openjdk-infrastructure wiki!
 * [[ci.adoptopenjdk.net]] - Jenkins Master
 * [[Build Machines]]
 * [[Nagios Client Agent configuration]]
+* [[Monitoring Additional Services]]
 
 # Work In Progress (WIP) Documents:
 
