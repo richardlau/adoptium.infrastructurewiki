@@ -1,5 +1,8 @@
 Welcome to the openjdk-infrastructure wiki!
 
+# Introduction
+* [[Overview and Principles]]
+
 # Our Infrastructure
 
 * [Infrastructure Providers](https://adoptopenjdk.net/sponsors.html) (External Link)
