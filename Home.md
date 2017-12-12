@@ -10,6 +10,7 @@ Welcome to the openjdk-infrastructure wiki!
 
 * [[Nagios Client Agent configuration]]
 * [[Clients that have ICMP Disabled]]
+* [[Additional steps for Firewalled or Nat'ed Nagios Clients]]
 * [[Monitoring Additional Services]]
 
 # Work In Progress (WIP) Documents:
