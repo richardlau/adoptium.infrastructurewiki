@@ -12,7 +12,16 @@ The following information is provided to be as open as possible about the admini
 
 > Principle : We will use industry tools and techniques for password management
 
-We use LastPass to hold shared passwords.  If you need access to a particular password then you can ask on the [Slack Channel](https://adoptopenjdk.slack.com) or [Mailing List](http://mail.openjdk.java.net/mailman/listinfo/adoption-discuss).
+We use 3 different tools to store shared passwords:
+
+#### [KeyBox](https://keybox.adoptopenjdk.net)
+KeyBox is used to distribute SSH keys on all of our ssh based machines. Any member of the organisation is entitled to non-elevated user access (`jenkins`) on all of our machines. If you require higher levels of access or if you aren't in the organisation then please create an issue [here](https://github.com/AdoptOpenJDK/openjdk-infrastructure/issues/new).
+
+#### [AdoptOpenJDK/secrets](https://github.com/AdoptOpenJDK/secrets)
+This is a private GitHub repo that only the two infrastructure teams have access to. It contains the passwords for Windows machines, macOS machines, codesign certificates etc. To get access you must first create an issue [here](https://github.com/AdoptOpenJDK/openjdk-infrastructure/issues/new). Once that has been approved create a second issue [here](https://github.com/AdoptOpenJDK/secrets/issues/new) with your public GPG key.
+
+#### LastPass
+If you need access to a particular password from here then you can ask on the [Slack Channel](https://adoptopenjdk.slack.com) or [Mailing List](http://mail.openjdk.java.net/mailman/listinfo/adoption-discuss).
 
 ## Github
 
@@ -33,8 +42,6 @@ TODO: Who decides on team membership changes?  Suggestion, nomination by existin
 We have a reasonably large number of Linux-based machines whose administration may require direct shell access.  Shell access to these machines via password login is disabled, and we only allow remote secure shell access via public/private key.
 
 To ensure that these systems remain stable and secure we prefer to grant limited time access to people (and bots/processes) who need machine access for administering them, and keep the master secrets to a very small group of owners. The 'ownership' group tends to be people who are ultimately responsible for activity on those machines, i.e. through legal contract with their service provider / employer.
-
-Also see [[[WIP] Temporary admin access to build machines]]
 
 ## Other resources
 
