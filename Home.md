@@ -19,6 +19,7 @@ Welcome to the openjdk-infrastructure wiki!
 
 * [[Restarting the Jenkins master]] - ci.adoptopenjdk.net
 * [[Adding a new build variant]]
+* [[How to start contributing to AdoptOpenJDK Infrastructure]]
 
 # Work In Progress (WIP) Documents:
 
