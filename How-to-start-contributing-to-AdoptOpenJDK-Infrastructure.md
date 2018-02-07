@@ -11,7 +11,7 @@ To achieve this, we need people to help us maintain the infrastructure, tools an
 
 If you want to get involved, the [Get Involved](https://adoptopenjdk.net/getinvolved.html) article in the AdoptOpenJDK blog is a good place to start. Also, you should read the the [AdoptOpenJDK Infrastructure Onboarding Guide](https://github.com/AdoptOpenJDK/openjdk-infrastructure/blob/master/ONBOARDING.md) in the AdoptOpenJDK Infrastructure repository at github.com.
 
-I've described other things you need to know and do below.
+The rest of this document describes what else you need to know and do.
 
 # The AdoptOpenJDK Infrastructure GitHub repository
 
