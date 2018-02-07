@@ -51,7 +51,7 @@ The rest of this document describes what else you need to know and do.
 
 - We have a secrets repository at https://github.com/AdoptOpenJDK/secrets.
 - We use it to hold files that have been encrypted.
-- We use a tool called `dotgpg` to create, encryppt, decrypt, edit and view these files.
+- We use a tool called `dotgpg` to create, encrypt, decrypt, edit and view these files.
   - Instructions for how to set this up this tool [here](https://github.com/AdoptOpenJDK/secrets/blob/master/README.md).
 
 # Slack
