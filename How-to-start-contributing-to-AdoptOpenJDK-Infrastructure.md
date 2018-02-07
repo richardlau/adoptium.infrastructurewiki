@@ -9,7 +9,9 @@ The intention of AdoptOpenJDK is to provide binaries and hardware access for all
 
 To achieve this, we need people to help us maintain the infrastructure, tools and systems we use and rely on. If this is something you'd like to get involed with, this document provides an overview of how to get started.
 
-Please start by read the the [AdoptOpenJDK Infrastructure Onboarding Guide](https://github.com/AdoptOpenJDK/openjdk-infrastructure/blob/master/ONBOARDING.md) in the AdoptOpenJDK Infrastructure repository at github.com.
+If you want to get involved, the [Get Involved](https://adoptopenjdk.net/getinvolved.html) article in the AdoptOpenJDK blog is a good place to start. Also, you should read the the [AdoptOpenJDK Infrastructure Onboarding Guide](https://github.com/AdoptOpenJDK/openjdk-infrastructure/blob/master/ONBOARDING.md) in the AdoptOpenJDK Infrastructure repository at github.com.
+
+I've described other things you need to know and do below.
 
 # The AdoptOpenJDK Infrastructure GitHub repository
 
@@ -20,6 +22,7 @@ Please start by read the the [AdoptOpenJDK Infrastructure Onboarding Guide](http
 # KeyBox
 
 - Provides ssh key management.
+- See [SSH Key Management with KeyBox](https://blog.adoptopenjdk.net/2017/08/ssh-key-management-keybox) in the AdoptOpenJDK blog for more details about how we use KeyBox.
 - Used to control access to AdoptOpenJDK machines.
 - Add your personal public ssh key to allow you to log on to the AdoptOpenJDK machines using your ssh key.
 - Ask a member of the [admin_infrastructure](https://github.com/orgs/AdoptOpenJDK/teams/admin_infrastructure/members) team to add your public ssh key.
@@ -27,15 +30,29 @@ Please start by read the the [AdoptOpenJDK Infrastructure Onboarding Guide](http
 # Nagios
 
 - Monitors the AdoptOpenJDK machines.
-- Web interface at https://nagios.adoptopenjdk.net/
-  - Credentials: Ask a member of the [admin_infrastructure](https://github.com/orgs/AdoptOpenJDK/teams/admin_infrastructure/members) team for access.
-- nagios.adoptopenjdk.net
-  - Credentials: Uses what you've added to KeyBox.
+- Web interface at https://nagios.adoptopenjdk.net/.
+  - Ask a member of the [admin_infrastructure](https://github.com/orgs/AdoptOpenJDK/teams/admin_infrastructure/members) team for access.
+  - Log on using the credentials created for you.
+- nagios.adoptopenjdk.net.
+  - Log on using the userid and SSH key you added to KeyBox.
 
 # Ansible AWX
 
-- Web interface at http://ansible.adoptopenjdk.net/
-  - Credentials: Uses your GitHub credentials.
+- Where the various build jobs run.
+- Web interface at http://ansible.adoptopenjdk.net/.
+- Log on using your GitHub credentials.
+
+# Jenkins
+
+- Web interface at https://ci.adoptopenjdk.net/.
+- Log on using your GitHub credentials.
+
+# Secrets and dotgpg
+
+- We have a secrets repository at https://github.com/AdoptOpenJDK/secrets.
+- We use it to hold files that have been encrypted.
+- We use a tool called `dotgpg` to create, encryppt, decrypt, edit and view these files.
+  - Instructions for how to set this up this tool [here](https://github.com/AdoptOpenJDK/secrets/blob/master/README.md).
 
 # Slack
 
