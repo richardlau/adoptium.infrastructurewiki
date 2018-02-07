@@ -56,7 +56,7 @@ The rest of this document describes what else you need to know and do.
 
 # Slack
 
-Join the following team / channels...
+Follow us on...
 
 - [adoptopenjdk.slack.com](https://adoptopenjdk.slack.com/)
   - [#infrastructure](https://adoptopenjdk.slack.com/messages/C53GHCXL4)
