@@ -9,15 +9,27 @@ The intention of AdoptOpenJDK is to provide binaries and hardware access for all
 
 To achieve this, we need people to help us maintain the infrastructure, tools and systems we use and rely on. If this is something you'd like to get involed with, this document provides an overview of how to get started.
 
-If you want to get involved, the [Get Involved](https://adoptopenjdk.net/getinvolved.html) article in the AdoptOpenJDK blog is a good place to start. Also, you should read the the [AdoptOpenJDK Infrastructure Onboarding Guide](https://github.com/AdoptOpenJDK/openjdk-infrastructure/blob/master/ONBOARDING.md) in the AdoptOpenJDK Infrastructure repository at github.com.
+If you want to get involved, please read on...
 
-The rest of this document describes what else you need to know and do.
+# Access to the AdoptOpenJDK GitHub Organization.
 
-# The AdoptOpenJDK Infrastructure GitHub repository
+This is at https://github.com/AdoptOpenJDK. It's an open community so you should be able to access it. If you can't, please contact a member of the `admin-infrastructure` or `infrastructure` teams.
 
-- The repository is at https://github.com/AdoptOpenJDK/openjdk-infrastructure.
-- If you're reading this document, you already have access to it.
-- You need to be added to the [infrastructure](https://github.com/orgs/AdoptOpenJDK/teams/infrastructure) team. To request to be added, go to the [AdoptOpenJDK Infrastructure](https://github.com/AdoptOpenJDK/openjdk-infrastructure) repository and create an issue requesting to be added to the team. The issue I created is [here](https://github.com/AdoptOpenJDK/openjdk-infrastructure/issues/156) if you want an example. Anyone in the [admin_infrastructure](https://github.com/orgs/AdoptOpenJDK/teams/admin_infrastructure/members) team will be able to approve your request and add you to the team. The approval itself does not automatically add you - that's there for traceability. As part of the approval, members of the [admin_infrastructure](https://github.com/orgs/AdoptOpenJDK/teams/admin_infrastructure/members) team will also add you to the team.
+# Join the infrastructure team
+
+The infrastructure team repository is at https://github.com/AdoptOpenJDK/openjdk-infrastructure. To access it, you'll need to join the `infrastructure` team. To request to be added to that team, go to the [AdoptOpenJDK Infrastructure repository](https://github.com/AdoptOpenJDK/openjdk-infrastructure) and create an issue requesting to be added. The issue I created is [here](https://github.com/AdoptOpenJDK/openjdk-infrastructure/issues/156) if you want an example.
+
+A member of the `admin-infrastructure` section team will approve the issue and add you to the team. The approval itself does not automatically add you - that's there for traceability. You'll have to wait to be added.
+
+# More onboarding instructions
+
+Please read the following guides...
+- [Get Involved](https://adoptopenjdk.net/getinvolved.html) (in the AdoptOpenJDK blog).
+- [AdoptOpenJDK Infrastructure Onboarding Guide](https://github.com/AdoptOpenJDK/openjdk-infrastructure/blob/master/ONBOARDING.md) (in the AdoptOpenJDK GitHub wiki).
+
+If you are not able to access those documents, please contact any member of the admin-infrastructure or infrastructure teams.
+
+The rest of this document describes what else you need to do.
 
 # KeyBox
 
@@ -25,13 +37,13 @@ The rest of this document describes what else you need to know and do.
 - See [SSH Key Management with KeyBox](https://blog.adoptopenjdk.net/2017/08/ssh-key-management-keybox) in the AdoptOpenJDK blog for more details about how we use KeyBox.
 - Used to control access to AdoptOpenJDK machines.
 - Add your personal public ssh key to allow you to log on to the AdoptOpenJDK machines using your ssh key.
-- Ask a member of the [admin_infrastructure](https://github.com/orgs/AdoptOpenJDK/teams/admin_infrastructure/members) team to add your public ssh key.
+- Ask a member of the `admin_infrastructure` team to add your public ssh key.
 
 # Nagios
 
 - Monitors the AdoptOpenJDK machines.
 - Web interface at https://nagios.adoptopenjdk.net/.
-  - Ask a member of the [admin_infrastructure](https://github.com/orgs/AdoptOpenJDK/teams/admin_infrastructure/members) team for access.
+  - Ask a member of the `admin_infrastructure` team for access.
   - Log on using the credentials created for you.
 - nagios.adoptopenjdk.net.
   - Log on using the userid and SSH key you added to KeyBox.
@@ -58,8 +70,82 @@ The rest of this document describes what else you need to know and do.
 
 Follow us on...
 
-- [adoptopenjdk.slack.com](https://adoptopenjdk.slack.com/)
-  - [#infrastructure](https://adoptopenjdk.slack.com/messages/C53GHCXL4)
-  - [#infrastructure-bot](https://adoptopenjdk.slack.com/messages/C8C212BU6)
+<table>
+  <tr>
+    <th> Team </th>
+    <th colspan="2"> Channel </th>
+  </tr>
+  <tr>
+    <td> <a href="https://adoptopenjdk.slack.com/"> adoptopenjdk.slack.com </a> </td>
+    <td> <a href="https://adoptopenjdk.slack.com/messages/C53GHCXL4"> #infrastructure </a> </td>
+    <td> <a href="https://adoptopenjdk.slack.com/messages/C8C212BU6"> #infrastructure-bot </a> </td>
+  </tr>
+  <tr>
+    <td> <a href="https://ibm-cloud.slack.com/"> ibm-cloud.slack.com </a> </td>
+    <td colspan="2"> <a href="https://ibm-cloud.slack.com/messages/C5Q4KAMJA"> #rt-adoptopenjdk </a> </td>
+  </tr>
+</table>
 
+# Contacts
 
+## Team: admin-infrastructure ( [GitHub](https://github.com/orgs/AdoptOpenJDK/teams/admin_infrastructure/members) )
+
+<table>
+  <tr>
+    <th> Member </th>
+    <th> Slack </th>
+    <th> GitHub </th>
+  </tr>
+  <tr>
+    <td> Brad Blondin </td>
+    <td> @bblondin </td>
+    <td> <a href="https://github.com/bblondin"> https://github.com/bblondin </a> </td>
+  </tr>
+  <tr>
+    <td> George Adams </td>
+    <td> @gdams </td>
+    <td> <a href="https://github.com/gdams"> https://github.com/gdams </a> </td>
+  </tr>
+</table>
+
+## Team: infrastructure ( [GitHub](https://github.com/orgs/AdoptOpenJDK/teams/infrastructure/members) )
+
+<table>
+  <tr>
+    <th> Member </th>
+    <th> Slack </th>
+    <th> GitHub </th>
+  </tr>
+  <tr>
+    <td> Brad Blondin </td>
+    <td> @bblondin </td>
+    <td> <a href="https://github.com/bblondin"> https://github.com/bblondin </a> </td>
+  </tr>
+  <tr>
+    <td> George Adams </td>
+    <td> @gdams </td>
+    <td> <a href="https://github.com/gdams"> https://github.com/gdams </a> </td>
+  </tr>
+  <tr>
+    <td> Geraint Jones </td>
+    <td> @Geraint </td>
+    <td> <a href="https://github.com/geraintwjones"> https://github.com/geraintwjones </a> </td>
+  </tr>
+  <tr>
+    <td> Peter Stanton </td>
+    <td> @Peter Stanton </td>
+    <td> <a href="https://github.com/pnstanton"> https://github.com/pnstanton </a> </td>
+  </tr>
+  <tr>
+    <td> Stewart X Addison </td>
+    <td> @sxa </td>
+    <td> <a href="https://github.com/sxa555"> https://github.com/sxa555 </a> </td>
+  </tr>
+  <tr>
+    <td> Tim Ellison </td>
+    <td> @tpellison </td>
+    <td> <a href="https://github.com/tellison"> https://github.com/tellison </a> </td>
+  </tr>
+</table>
+
+Membership of these teams will change over time. Please refer to the team link for the latest list of members.
