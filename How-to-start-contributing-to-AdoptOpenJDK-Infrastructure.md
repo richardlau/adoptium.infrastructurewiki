@@ -7,17 +7,17 @@ The intention of AdoptOpenJDK is to provide binaries and hardware access for all
 - An open, common, audited, build infrastructure for vendors to use (if they wish).
 - Providing a place to try out build infrastructure ideas that might one day be re-implemented in the OpenJDK project.
 
-To achieve this, we need people to help us maintain the infrastructure, tools and systems we use and rely on. If this is something you'd like to get involed with, this document provides an overview of how to get started.
+To achieve this, we need people to help us maintain the infrastructure, tools and systems we use and rely on. If this is something you'd like to get involved with, this document provides an overview of how to get started.
 
 If you want to get involved, please read on...
 
-# Access to the AdoptOpenJDK GitHub Organization.
+# Join the AdoptOpenJDK GitHub Organisation
 
-This is at https://github.com/AdoptOpenJDK. It's an open community so you should be able to access it. If you can't, please contact a member of the `admin-infrastructure` or `infrastructure` teams (see the [contacts](https://github.com/AdoptOpenJDK/openjdk-infrastructure/wiki/How-to-start-contributing-to-AdoptOpenJDK-Infrastructure#contacts) section below).
+This is at https://github.com/AdoptOpenJDK. It's an open community so you should be able to access it. If you can't, please contact a member of the `admin-infrastructure` team (see the [contacts](https://github.ibm.com/runtimes/infrastructure/wiki/Contributing-to-AdoptOpenJDK-Infrastructure#contacts) section below).
 
 # Join the infrastructure team
 
-The infrastructure team repository is at https://github.com/AdoptOpenJDK/openjdk-infrastructure. To access it, you'll need to join the `infrastructure` team. To request to be added to that team, go to the [AdoptOpenJDK Infrastructure repository](https://github.com/AdoptOpenJDK/openjdk-infrastructure) and create an issue requesting to be added. The issue I created is [here](https://github.com/AdoptOpenJDK/openjdk-infrastructure/issues/156) if you want an example.
+The `infrastructure` team repository is at https://github.com/AdoptOpenJDK/openjdk-infrastructure. To contribute to it, you'll need to join the `infrastructure` team. To do this, go to the [AdoptOpenJDK Infrastructure repository](https://github.com/AdoptOpenJDK/openjdk-infrastructure) and create an issue requesting to be added. The issue I created is [here](https://github.com/AdoptOpenJDK/openjdk-infrastructure/issues/156) if you want an example.
 
 A member of the `admin-infrastructure` section team will approve the issue and add you to the team. The approval itself does not automatically add you - that's there for traceability. You'll have to wait to be added.
 
@@ -27,7 +27,7 @@ Please read the following guides...
 - [Get Involved](https://adoptopenjdk.net/getinvolved.html) (in the AdoptOpenJDK blog).
 - [AdoptOpenJDK Infrastructure Onboarding Guide](https://github.com/AdoptOpenJDK/openjdk-infrastructure/blob/master/ONBOARDING.md) (in the AdoptOpenJDK GitHub wiki).
 
-If you are not able to access those documents, please contact any member of the admin-infrastructure or infrastructure teams.
+If you are not able to access those documents, please contact any member of the `admin-infrastructure` teams.
 
 The rest of this document describes what else you need to do.
 
@@ -73,22 +73,18 @@ Follow us on...
 <table>
   <tr>
     <th> Team </th>
-    <th colspan="2"> Channel </th>
+    <th colspan="2"> Channels </th>
   </tr>
   <tr>
     <td> <a href="https://adoptopenjdk.slack.com/"> adoptopenjdk.slack.com </a> </td>
     <td> <a href="https://adoptopenjdk.slack.com/messages/C53GHCXL4"> #infrastructure </a> </td>
     <td> <a href="https://adoptopenjdk.slack.com/messages/C8C212BU6"> #infrastructure-bot </a> </td>
   </tr>
-  <tr>
-    <td> <a href="https://ibm-cloud.slack.com/"> ibm-cloud.slack.com </a> </td>
-    <td colspan="2"> <a href="https://ibm-cloud.slack.com/messages/C5Q4KAMJA"> #rt-adoptopenjdk </a> </td>
-  </tr>
 </table>
 
 # Contacts
 
-## Team: admin-infrastructure ( [GitHub](https://github.com/orgs/AdoptOpenJDK/teams/admin_infrastructure/members) )
+## The `admin-infrastructure` team ( [GitHub](https://github.com/orgs/AdoptOpenJDK/teams/admin_infrastructure/members) )
 
 <table>
   <tr>
@@ -108,7 +104,7 @@ Follow us on...
   </tr>
 </table>
 
-## Team: infrastructure ( [GitHub](https://github.com/orgs/AdoptOpenJDK/teams/infrastructure/members) )
+## The `infrastructure` team( [GitHub](https://github.com/orgs/AdoptOpenJDK/teams/infrastructure/members) )
 
 <table>
   <tr>
