@@ -25,8 +25,8 @@ A member of the `admin-infrastructure` section team will approve the issue and a
 
 Please read the following guides...
 - [Get Involved](https://adoptopenjdk.net/getinvolved.html) (in the AdoptOpenJDK blog).
-- [AdoptOpenJDK Infrastructure Onboarding Guide](https://github.com/AdoptOpenJDK/openjdk-infrastructure/blob/master/ONBOARDING.md) (in the AdoptOpenJDK GitHub wiki).
-- [Contribution Guide](https://github.com/AdoptOpenJDK/openjdk-infrastructure/blob/master/CONTRIBUTING.md) (in the AdoptOpenJDK GitHub wiki).
+- [AdoptOpenJDK Infrastructure Onboarding Guide](https://github.com/AdoptOpenJDK/openjdk-infrastructure/blob/master/ONBOARDING.md) (in the AdoptOpenJDK infrastructure repository).
+- [Contribution Guide](https://github.com/AdoptOpenJDK/openjdk-infrastructure/blob/master/CONTRIBUTING.md) (in the AdoptOpenJDK infrastructure repository).
 
 If you are not able to access those documents, please contact any member of the `admin-infrastructure` teams.
 
