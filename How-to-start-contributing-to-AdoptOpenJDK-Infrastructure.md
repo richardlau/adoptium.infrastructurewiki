@@ -13,7 +13,7 @@ If you want to get involved, please read on...
 
 # Access to the AdoptOpenJDK GitHub Organization.
 
-This is at https://github.com/AdoptOpenJDK. It's an open community so you should be able to access it. If you can't, please contact a member of the `admin-infrastructure` or `infrastructure` teams.
+This is at https://github.com/AdoptOpenJDK. It's an open community so you should be able to access it. If you can't, please contact a member of the `admin-infrastructure` or `infrastructure` teams (see the [contacts](https://github.com/AdoptOpenJDK/openjdk-infrastructure/wiki/How-to-start-contributing-to-AdoptOpenJDK-Infrastructure#contacts) section below).
 
 # Join the infrastructure team
 
