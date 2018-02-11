@@ -44,8 +44,7 @@ The rest of this document describes what else you need to do.
 
 - Monitors the AdoptOpenJDK machines.
 - Web interface at https://nagios.adoptopenjdk.net/.
-  - Log on using your GitHub credentials.
-  - You will be asked to approve the connection between Nagios and GitHub the first time you log on.
+  - Ask a member of the `admin_infrastructure` team for the credentials to log on.
 - nagios.adoptopenjdk.net.
   - Log on using the userid and SSH key you added to KeyBox.
 
