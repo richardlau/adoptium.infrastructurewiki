@@ -11,6 +11,10 @@ To achieve this, we need people to help us maintain the infrastructure, tools an
 
 If you want to get involved, please read on...
 
+# Sign up for a GitHub account
+
+If you don't have a GitHub account already, follow the instructions [here](https://help.github.com/articles/signing-up-for-a-new-github-account/) to get one. You don't need a paid one to work on AdoptOpenJDK, so sign up for a free one.
+
 # Join the AdoptOpenJDK GitHub Organisation
 
 This is at https://github.com/AdoptOpenJDK. It's an open community so you should be able to access it. If you can't, please contact a member of the `admin-infrastructure` team (see the [contacts](https://github.ibm.com/runtimes/infrastructure/wiki/Contributing-to-AdoptOpenJDK-Infrastructure#contacts) section below).
