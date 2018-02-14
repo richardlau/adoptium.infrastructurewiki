@@ -88,64 +88,11 @@ Follow us on...
 
 # Contacts
 
-## The `admin-infrastructure` team ( [GitHub](https://github.com/orgs/AdoptOpenJDK/teams/admin_infrastructure/members) )
+## The `admin-infrastructure` team
 
-<table>
-  <tr>
-    <th> Member </th>
-    <th> Slack </th>
-    <th> GitHub </th>
-  </tr>
-  <tr>
-    <td> Brad Blondin </td>
-    <td> @bblondin </td>
-    <td> <a href="https://github.com/bblondin"> https://github.com/bblondin </a> </td>
-  </tr>
-  <tr>
-    <td> George Adams </td>
-    <td> @gdams </td>
-    <td> <a href="https://github.com/gdams"> https://github.com/gdams </a> </td>
-  </tr>
-</table>
+- See the list of team members in GitHub [here](https://github.com/orgs/AdoptOpenJDK/teams/admin_infrastructure/members).
 
-## The `infrastructure` team( [GitHub](https://github.com/orgs/AdoptOpenJDK/teams/infrastructure/members) )
+## The `infrastructure` team
 
-<table>
-  <tr>
-    <th> Member </th>
-    <th> Slack </th>
-    <th> GitHub </th>
-  </tr>
-  <tr>
-    <td> Brad Blondin </td>
-    <td> @bblondin </td>
-    <td> <a href="https://github.com/bblondin"> https://github.com/bblondin </a> </td>
-  </tr>
-  <tr>
-    <td> George Adams </td>
-    <td> @gdams </td>
-    <td> <a href="https://github.com/gdams"> https://github.com/gdams </a> </td>
-  </tr>
-  <tr>
-    <td> Geraint Jones </td>
-    <td> @Geraint </td>
-    <td> <a href="https://github.com/geraintwjones"> https://github.com/geraintwjones </a> </td>
-  </tr>
-  <tr>
-    <td> Peter Stanton </td>
-    <td> @Peter Stanton </td>
-    <td> <a href="https://github.com/pnstanton"> https://github.com/pnstanton </a> </td>
-  </tr>
-  <tr>
-    <td> Stewart X Addison </td>
-    <td> @sxa </td>
-    <td> <a href="https://github.com/sxa555"> https://github.com/sxa555 </a> </td>
-  </tr>
-  <tr>
-    <td> Tim Ellison </td>
-    <td> @tpellison </td>
-    <td> <a href="https://github.com/tellison"> https://github.com/tellison </a> </td>
-  </tr>
-</table>
+- See the list of team members in GitHub [here](https://github.com/orgs/AdoptOpenJDK/teams/infrastructure/members).
 
-Membership of these teams will change over time. Please refer to the team link for the latest list of members.
