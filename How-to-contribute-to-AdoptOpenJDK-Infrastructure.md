@@ -74,17 +74,9 @@ The rest of this document describes what else you need to do.
 
 Follow us on...
 
-<table>
-  <tr>
-    <th> Team </th>
-    <th colspan="2"> Channels </th>
-  </tr>
-  <tr>
-    <td> <a href="https://adoptopenjdk.slack.com/"> adoptopenjdk.slack.com </a> </td>
-    <td> <a href="https://adoptopenjdk.slack.com/messages/C53GHCXL4"> #infrastructure </a> </td>
-    <td> <a href="https://adoptopenjdk.slack.com/messages/C8C212BU6"> #infrastructure-bot </a> </td>
-  </tr>
-</table>
+- [AdoptOpenJDK](adoptopenjdk.slack.com)
+  - [#infrastructure](https://adoptopenjdk.slack.com/messages/C53GHCXL4)
+  - [#infrastructure-bot](https://adoptopenjdk.slack.com/messages/C8C212BU6)
 
 # Contacts
 
