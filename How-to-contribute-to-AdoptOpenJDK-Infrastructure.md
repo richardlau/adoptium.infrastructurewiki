@@ -56,7 +56,7 @@ The rest of this document describes what else you need to do.
 
 - Where the various build jobs run.
 - Web interface at http://ansible.adoptopenjdk.net/.
-- Log on using your GitHub credentials.
+- Log on using your GitHub credentials (click the GitHub logo).
 
 # Jenkins
 
