@@ -63,7 +63,7 @@ The rest of this document describes what else you need to do.
 - Web interface at https://ci.adoptopenjdk.net/.
 - Log on using your GitHub credentials.
 
-# Secrets and dotgpg
+# Secrets, gpg and dotgpg
 
 - We have a secrets repository at https://github.com/AdoptOpenJDK/secrets.
 - We use it to hold files that have been encrypted.
