@@ -8,9 +8,9 @@ You typically need to create two new repositories for storing nightly builds and
 2. Create a nightly repo using this [link](https://github.com/organizations/AdoptOpenJDK/repositories/new) naming it `openjdk{version}-{variant}-nightly` (e.g `openjdk8-openj9-nightly`).
 3. On both of these newly created repos navigate to Settings, Collaborators and teams and add the GetOpenJDK team as Admin.
 
-# 2. Modify the OpenJDK-Website-Backend Job to start polling the repo to check for new releases
+# 2. Modify the OpenJDK-Website-Backend Job
 
-1. Add a new block of code with your release details [here](https://github.com/AdoptOpenJDK/openjdk-website-backend/blob/master/sbin/checkApi.sh#L25-L31).
+1. To start polling the repo to check for new releases add a new block of code with your release details [here](https://github.com/AdoptOpenJDK/openjdk-website-backend/blob/master/sbin/checkApi.sh#L25-L31).
 
 # 3. Add the variant to the website
 
@@ -29,7 +29,9 @@ You typically need to create two new repositories for storing nightly builds and
 # 6. Modify the Release counter job
 1. Add a new line to the job [here](https://ci.adoptopenjdk.net/job/release_counter/configure) to gather download statistics for your variant.
 
-# 7. Create a nightly and release pipeline for your variant
+# 7. Create nightly and/or release pipelines
+
+You need to have Pipeline create / edit privileges for this.
 
 TODO add details here. Contact [gdams](https://github.com/gdams) for information.
 
