@@ -18,7 +18,7 @@ Welcome to the openjdk-infrastructure wiki!
 # "How-to" guides
 
 * [[Restarting the Jenkins master]] - ci.adoptopenjdk.net
-* [[Adding a new build variant]]
+* [Adding a new build variant](https://github.com/AdoptOpenJDK/TSC/wiki/Adding-a-new-build-variant)
 * [[How to contribute to AdoptOpenJDK Infrastructure]]
 
 # Work In Progress (WIP) Documents:
