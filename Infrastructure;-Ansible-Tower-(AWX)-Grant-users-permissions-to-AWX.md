@@ -2,7 +2,7 @@
 
 ### User:
 
-Open https://rt-ansible-tower.canlab.ibm.com/
+Open https://ansible.adoptopenjdk.net
 
 At the "Welcome to Ansible AWX! Please sign in." page click on the GitHub logo beside "SIGN IN WITH"
 
@@ -12,7 +12,7 @@ GitHub will authorize you and then redirect you back to AWX
 
 ### Administrator:
 
-Open https://rt-ansible-tower.canlab.ibm.com/
+Open https://ansible.adoptopenjdk.net
 
 Sign in
 
