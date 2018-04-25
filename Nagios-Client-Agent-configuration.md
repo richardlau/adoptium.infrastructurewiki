@@ -181,6 +181,9 @@ chmod 700 ~/.ssh
 chmod 600 ~/.ssh/authorized_keys 
 echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDLCl3cMafCiSK76iiT3kktL55QN/Cx2Ub0HT8wnJtw0bNn00KP+k+2u7DLF8OSI6v8MESgXIy6EDaSS7I+/sGV8xn0GLWWTSU8eUJ9DK5U0MWuvYM7kBl2z8s9VcW2rnZziSJcdBvgT60TWS3QEAZG78XM2E/h3iTR1UpbaCcECnsztbMyc9iwySLuN8u1p+D/KFlfvi8jm5Jn87WKH8PbEO9KU45PkukdQ14xk7h4xzDmWHc7cZweK8NvpSmLu5Ql0OB8bdmU6n876r0oNa2BvGucQZvkdd4UoaWkLDQ/4EPqQUfPvAJxbmXeQDo8SzE6J/a283aU92McNVwpcTVF nagios@Ubuntu-1604-xenial-64-minimal" >> ~/.ssh/authorized_keys
 exit
+
+# Install addon plugin for check_mem
+cd /usr/local/nagios/libexec && wget https://raw.githubusercontent.com/justintime/nagios-plugins/master/check_mem/check_mem.pl && mv check_mem.pl check_mem && chmod +x check_mem
 ```
 * [[Additional steps for Firewalled or Nat'ed Nagios Clients]]
 * [[Clients that have ICMP Disabled]]
