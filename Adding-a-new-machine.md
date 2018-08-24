@@ -6,7 +6,7 @@ Log into keybox.adoptopenjdk.net with the credentials (from the secrets reposito
 
 # Add to AWX (ansible.adoptopenjdk.net)
 
-You will need to submit a git pull request to update https://github.com/AdoptOpenJDK/openjdk-infrastructure/blob/master/ansible/inventory.yml with the new machine's details
+You will need to submit a git pull request to update https://github.com/AdoptOpenJDK/openjdk-infrastructure/blob/master/ansible/inventory.yml with the new machine's details. Note that when the file is imported into AWX the machine name will have the machine type (e.g. `build`, `test` etc.) and also the provider `azure`, `osuosl` etc. prepended to the name so it will appear in ansible as e.g. `build-osuosl-centos74-ppc64le-2`)
 
 Once you've done this and your PR has been accepted log into AWX (Using the right git icon on ansible.adoptopenjdk.net) and you'll need to allow two jobs to complete. The first is in `Projects -> AdoptOpenJDK GIT Infrastructure` - click the cloud button ("Start an SCM update") to run it. This mirrors the latest code from git onto the filesystem on the AWX server. The second job runs every half an hour and reads from the repository into the ansible inventory. You can see this one in Schedules as `30 minute inventory sync`. Once this runs after the `AdoptOpenJDK GIT Infrastructure` your machine should show up in the inventory (`Inventories -> Dynamic Hosts from Github -> Hosts`)
 
