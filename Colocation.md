@@ -2,7 +2,7 @@
 Provided by [Nine](https://www.nine.ch), hosted at [Colozüri](https://www.colozueri.ch/).
 
 Overview:
-* 20u usable
+* 20u usable (9u free)
 * One 1 Gbps link with HA (automatic failover if port goes down)
 * Redundant power bars
 * 1 kW power budget
@@ -19,3 +19,20 @@ People that are elegible to open support requests and request remote hands:
 * [Will Parker](https://github.com/willsparker)
 
 ### Installed Equipment
+
+Network, management:
+
+* [Ubiquiti EdgeRouter Infinity ER-8-XG](https://dl.ubnt.com/datasheets/edgemax/EdgeRouter_ER-8-XG_DS.pdf) (purchased from Brack on 2020-10-13)
+* [Ubiquiti EdgeRouter Infinity ER-8-XG](https://dl.ubnt.com/datasheets/edgemax/EdgeRouter_ER-8-XG_DS.pdf) (purchased from Brack on 2020-10-13)
+* [Netgear M4300-48X](https://www.netgear.com/business/products/switches/managed/M4300-48X.aspx) (purchased from Brack on 2020-10-13)
+* [Raritan Dominion KX III-108](https://www.raritan.com/products/kvm-serial/kvm-over-ip-switches/enterprise-ip-kvm-switch) (purchased from Brack on 2020-10-16)
+
+Servers:
+* Twin Mac Minis:
+  * Mac Mini (2020) with 3.2 GHz 6 Core Intel i7, 64 GB RAM, 2 TB SSD, 10 GBase-T Ethernet with Apple Care+ (purchased from Apple on 2020-10-16)
+  * mounted in [Sonnet RackMac mini 2018](https://www.sonnettech.com/product/rackmacmini.html) (purchased from Brack on 2020-10-16)
+  * connected to KVM switch via HDMI, dual USB
+* ER12A BitScope Edge Rack incl. 12 Raspberry Pis 4B, 8GB, 120 GB SSD (purchased from BitScope on 2020-10-16)
+* ER12A BitScope Edge Rack incl. 12 Raspberry Pis 4B, 8GB, 120 GB SSD (purchased from BitScope on 2020-10-16)
+
+
