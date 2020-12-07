@@ -86,3 +86,8 @@ Templates are the entities that do the work of deploying playbooks. We create on
 
 The template can also have a schedule associated with it if you want to run it periodically, or you can run it manually by clicking the rocket ship icon next to it in the list.
 
+# Backups
+
+Two options:
+- Back up the docker containers
+- Using `./tower-cli receive --all -h localhost -u admin -p ASK --insecure` (`pip3 install ansible_tower_cli` if you don't have it)
