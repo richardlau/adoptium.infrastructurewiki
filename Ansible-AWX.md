@@ -16,6 +16,8 @@ As the new ansible user:
 
 Once ansible is running, connect to it on the standard SSL port (443)
 
+Some of the playbooks we use reference the `/Vendor_Files` directory. This needs to be present in the `ansible/awx_task` docker container: Put the `Vendor_Files` directory on the host and run `docker cp Vendor_Files awx_task:/Vendor_Files`
+
 # Setting up the configuration
 
 I will run through each of the concepts that AWX provides and explain how each of these are configured:
