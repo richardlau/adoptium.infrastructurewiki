@@ -14,7 +14,7 @@ As the new ansible user:
 - cd awx/installer
 - ansible-playbook -i inventory install.yml
 - docker logs -f awx_task (Don't skip this - it should have a message with `127.0.0.1 | SUCCESS` fairly quickly then after five minutes or so)
-- If anything goes wrong - clear it out `docker halt awx_task awx_web awx_postgres awx_redis` then `docker rm awx_task awx_web awx_postgres awx_redis` Wipe out `~awx/.awx` (will likely need root) and re-run the playbook after fixing anything obvious :-)
+- If anything goes wrong - clear it out `docker stop awx_task awx_web awx_postgres awx_redis` then `docker rm awx_task awx_web awx_postgres awx_redis` Wipe out `~awx/.awx` (will likely need root) and re-run the playbook after fixing anything obvious :-)
 
 Once ansible is running, connect to it on the standard SSL port (443)
 
