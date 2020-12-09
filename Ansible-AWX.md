@@ -1,8 +1,8 @@
 # Ubuntu server setup:
 
-- apt-get update
-- apt install git docker.io python3-pip libffi-dev 
-- useradd -G docker -m awx
+- `apt-get update`
+- `apt install git docker.io python3-pip libffi-dev`
+- `useradd -G docker -m awx`
 
 As the new `awx` user:
 
