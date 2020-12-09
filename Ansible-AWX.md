@@ -1,7 +1,7 @@
 # Ubuntu server setup:
 
 - apt install git docker.io python3-pip libffi-dev 
-- useradd -g docker -m ansible
+- useradd -g docker -m awx
 
 As the new ansible user:
 
