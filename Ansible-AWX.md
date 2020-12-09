@@ -2,18 +2,18 @@
 
 - apt-get update
 - apt install git docker.io python3-pip libffi-dev 
-- useradd -g docker -m awxgit
+- useradd -G docker -m awx
 
-As the new ansible user:
+As the new `awx` user:
 
-- git clone https://github.com/ansible/awx -b 15.0.1 (latest at time of writing)
-- openssl req -x509  -nodes -days 90  -newkey rsa:4096  -keyout server.key -out server.crt  -subj "/C=GB/ST=UK/L=London/O=AdoptOpenJDK/CN=awx.adoptopenjdk.net"
+- `git clone https://github.com/ansible/awx -b 15.0.1` (latest branch at time of writing)
+- `openssl req -x509  -nodes -days 1000 -newkey rsa:4096  -keyout server.key -out server.crt  -subj "/C=GB/ST=UK/L=London/O=AdoptOpenJDK/CN=awx.adoptopenjdk.net"`
 - Edit `awx/installer/inventory` and update `ssl_certificate` and `ssl_certificate_key` to the full path to the two files created from the openssl command above. Also change `admin_password` to something other than `password` (but probably not something with `!` in it)
-- pip3 install docker-compose ansible
-- export PATH=$HOME/.local/bin:$PATH
-- cd awx/installer
-- ansible-playbook -i inventory install.yml
-- docker logs -f awx_task (Don't skip this - it should have a message with `127.0.0.1 | SUCCESS` fairly quickly then after five minutes or so)
+- `pip3 install docker-compose ansible` (This will take a few minutes)
+- `export PATH=$HOME/.local/bin:$PATH`
+- `cd awx/installer`
+- `ansible-playbook -i inventory install.yml`
+- `docker logs -f awx_task` (Don't skip this - it should have a message with `127.0.0.1 | SUCCESS` fairly quickly then after five minutes or so)
 - If anything goes wrong - clear it out `docker stop awx_task awx_web awx_postgres awx_redis` then `docker rm awx_task awx_web awx_postgres awx_redis` Wipe out `~awx/.awx` (will likely need root) and re-run the playbook after fixing anything obvious :-)
 
 Once ansible is running, connect to it on the standard SSL port (443)
