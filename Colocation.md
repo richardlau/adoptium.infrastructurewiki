@@ -22,8 +22,8 @@ People that are elegible to open support requests and request remote hands:
 
 Network, management:
 
-* [Ubiquiti EdgeRouter Infinity ER-8-XG](https://dl.ubnt.com/datasheets/edgemax/EdgeRouter_ER-8-XG_DS.pdf) (purchased from Brack on 2020-10-13)
-* [Ubiquiti EdgeRouter Infinity ER-8-XG](https://dl.ubnt.com/datasheets/edgemax/EdgeRouter_ER-8-XG_DS.pdf) (purchased from Brack on 2020-10-13)
+* [Deciso DEC4630](https://www.deciso.com/product-catalog/DEC4630/) with OPNSense (purchased from Deciso 2020-11-06)
+* [Deciso DEC4630](https://www.deciso.com/product-catalog/DEC4630/) with OPNSense (purchased from Deciso 2020-11-06)
 * [Netgear M4300-48X](https://www.netgear.com/business/products/switches/managed/M4300-48X.aspx) (purchased from Brack on 2020-10-13)
 * [Raritan Dominion KX III-108](https://www.raritan.com/products/kvm-serial/kvm-over-ip-switches/enterprise-ip-kvm-switch) (purchased from Brack on 2020-10-16)
 
