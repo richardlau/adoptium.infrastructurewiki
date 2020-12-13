@@ -91,6 +91,7 @@ The template can also have a schedule associated with it if you want to run it p
 
 # Backups
 
-Two options:
+Three options:
 - Back up the docker containers
 - Using `./tower-cli receive --all -h localhost -u admin -p ASK --insecure` (`pip3 install ansible_tower_cli` if you don't have it)
+- Or `./awx --conf.insecure export` (after pip3 install awxkit`)
