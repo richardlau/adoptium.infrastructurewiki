@@ -90,7 +90,6 @@ Templates are the entities that do the work of deploying playbooks. We create on
 - PLAYBOOK: ansible/playbooks/AdoptOpenJDK_Unix_Playbook/main.yml
 - CREDENTIALS: `ssh admin key`
 - SKIP TAGS: `adoptopenjdk` (for now)
-- LABELS: `build`
 - EXTRA_VARIABLES: `ansible_ssh_user: root`
 
 The template can also have a schedule associated with it if you want to run it periodically, or you can run it manually by clicking the rocket ship icon next to it in the list.
