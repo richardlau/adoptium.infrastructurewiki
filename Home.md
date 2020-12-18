@@ -25,7 +25,3 @@ Welcome to the openjdk-infrastructure wiki!
 * [[Update the website certificate on ci.adoptopenjdk.net]]
 * [[Adding a new machine]]
 
-# Work In Progress (WIP) Documents:
-
-* [[Temporary admin access to build machines]]
-
