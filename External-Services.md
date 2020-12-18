@@ -13,3 +13,5 @@ As of April 2020, Artifactory is primarily being used to host our Linux packages
 * Remarks: none
 
 Artifacts should use `net.adoptopenjdk` as the Group ID (not **org**.adoptopenjdk). Packages are being signed using personal GPG keys.
+
+## OpenShift
