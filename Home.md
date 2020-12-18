@@ -2,6 +2,7 @@ Welcome to the openjdk-infrastructure wiki!
 
 # Introduction
 * [[Overview and Principles]]
+* [[AdoptOpenJDK infrastructure]]
 
 # Our Infrastructure
 
@@ -9,6 +10,9 @@ Welcome to the openjdk-infrastructure wiki!
 * [Build Machines](https://github.com/AdoptOpenJDK/openjdk-infrastructure/blob/master/docs/adoptopenjdk.pdf)
 * [[External Services]]
 * [[Colocation]]
+* [[Bastillion]] setup docs
+* [[Ansible AWX]] setup docs. Also [[Grant users permissions to AWX]]
+* [[How to start server.js]] - obsolete with OpenShift
 
 # Nagios Monitoring
 
