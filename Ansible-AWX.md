@@ -22,7 +22,7 @@ If you are going to be running via a cloudflare proxy, modify `awx/installer/rol
 
 Once ansible is running, connect to it on the standard SSL port (443)
 
-Some of the playbooks we use reference the `/Vendor_Files` directory. This needs to be present in the `ansible/awx_task` docker container: Put the `Vendor_Files` directory on the host and run `docker cp Vendor_Files awx_task:/Vendor_Files`
+TBC since some of this has been moved: Some of the playbooks we use reference the `/Vendor_Files` directory. This needs to be present in the `ansible/awx_task` docker container: Put the `Vendor_Files` directory on the host and run `docker cp Vendor_Files awx_task:/Vendor_Files`
 
 # Setting up the configuration
 
@@ -89,7 +89,7 @@ Templates are the entities that do the work of deploying playbooks. We create on
 - PROJECT: adoptopenjdk/openjdk-infrastructure
 - PLAYBOOK: ansible/playbooks/AdoptOpenJDK_Unix_Playbook/main.yml
 - CREDENTIALS: `ssh admin key`
-- SKIP TAGS: `adoptopenjdk` and `hosts_file` (for now)
+- SKIP TAGS: `adoptopenjdk` (for now)
 - LABELS: `build`
 - EXTRA_VARIABLES: `ansible_ssh_user: root`
 
