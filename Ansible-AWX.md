@@ -28,15 +28,15 @@ Some of the playbooks we use reference the `/Vendor_Files` directory. This needs
 
 I will run through each of the concepts that AWX provides and explain how each of these are configured:
 
-## Organization
-
-Create a new organisation called `AdoptOpenJDK`
-
 ## Authentication
 
 Either
 - Create users manually in the "Users" section
 - Go to Settings -> Authentication -> Github and set up a GitHub team ([Instructions here](https://docs.ansible.com/ansible-tower/latest/html/administration/social_auth.html#github-oauth2-settings)) with team ID 2342525 and organization map: `{"AdoptOpenJDK":{"admins":true}}` and team map `{"AdoptOpenJDK":{"organization":"AdoptOpenJDK","users":true,"remove":false}}`
+
+## Organization
+
+Create a new organisation called `AdoptOpenJDK`
 
 ## Project
 
