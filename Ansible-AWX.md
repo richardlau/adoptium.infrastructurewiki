@@ -12,6 +12,9 @@ As the new `awx` user:
 - `export PATH=$HOME/.local/bin:$PATH`
 - `pip3 install docker-compose ansible` (This will take a few minutes)
 - `cd awx/installer`
+
+If you are going to be running via a cloudflare proxy, modify `awx/installer/roles/local_docker/templates/nginx.conf.j2` to comment out the `Content-Security-Policy` header, otherwise you will fall foul of HSTS violations.
+
 - `ansible-playbook -i inventory install.yml`
 - **Needed due to AWX bug:** Wait 2½ minutes then run the playbook again
 - `docker logs -f awx_task` (Don't skip this - it should have a message with `127.0.0.1 | SUCCESS` fairly quickly then after five minutes or so)
