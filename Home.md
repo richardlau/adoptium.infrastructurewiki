@@ -16,6 +16,7 @@ Welcome to the openjdk-infrastructure wiki!
 
 # Nagios Monitoring
 
+* [[Overview of Nagios]]
 * [[Nagios Client Agent configuration]]
 * [[Clients that have ICMP Disabled]]
 * [[Additional steps for Firewalled or Nat'ed Nagios Clients]]
