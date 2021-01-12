@@ -35,4 +35,31 @@ Servers:
 * ER12A BitScope Edge Rack incl. 12 Raspberry Pis 4B, 8GB, 120 GB SSD (purchased from BitScope on 2020-10-16)
 * ER12A BitScope Edge Rack incl. 12 Raspberry Pis 4B, 8GB, 120 GB SSD (purchased from BitScope on 2020-10-16)
 
+### Network Setup
 
+The uplink is configured with active/passive high-availability over two perimeter networks (1 and 2, see below). 1 is the active, 2 the passive link. If one link goes down, traffic flows over the other link.
+
+#### Perimeter Network 1
+
+5.148.175.184/30
+Uplink IP: 5.148.175.185
+Our (gateway/firewall) IP: 5.148.175.186
+
+2a02:418:39aa:2::/64
+Uplink IP: 2a02:418:39aa:2::1
+Our (gateway/firewall) IP: 2a02:418:39aa:2::2
+
+#### Perimeter Network 2
+
+5.148.175.188/30
+Uplink IP: 5.148.175.189
+Our (gateway/firewall) IP: 5.148.175.190
+
+2a02:418:39aa:7::1/64
+Uplink IP: 2a02:418:39aa:2::1
+Our (gateway/firewall) IP: 2a02:418:39aa:7::2
+
+#### Public IP Ranges
+
+5.148.170.144/28
+2a02:418:3001::/48
