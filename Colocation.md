@@ -64,8 +64,6 @@ Our (gateway/firewall) IP: 2a02:418:39aa:7::2
 5.148.170.144/28  
 2a02:418:3001::/48
 
-(10.0.1.0/24)
-
 #### Management Network
 
 10.0.10.0/24 (VLAN 10)
