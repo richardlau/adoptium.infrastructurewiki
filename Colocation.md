@@ -41,25 +41,25 @@ The uplink is configured with active/passive high-availability over two perimete
 
 #### Perimeter Network 1
 
-5.148.175.184/30
-Uplink IP: 5.148.175.185
+5.148.175.184/30  
+Uplink IP: 5.148.175.185  
 Our (gateway/firewall) IP: 5.148.175.186
 
-2a02:418:39aa:2::/64
-Uplink IP: 2a02:418:39aa:2::1
+2a02:418:39aa:2::/64  
+Uplink IP: 2a02:418:39aa:2::1  
 Our (gateway/firewall) IP: 2a02:418:39aa:2::2
 
 #### Perimeter Network 2
 
-5.148.175.188/30
-Uplink IP: 5.148.175.189
+5.148.175.188/30  
+Uplink IP: 5.148.175.189  
 Our (gateway/firewall) IP: 5.148.175.190
 
-2a02:418:39aa:7::1/64
-Uplink IP: 2a02:418:39aa:2::1
+2a02:418:39aa:7::1/64  
+Uplink IP: 2a02:418:39aa:2::1  
 Our (gateway/firewall) IP: 2a02:418:39aa:7::2
 
 #### Public IP Ranges
 
-5.148.170.144/28
+5.148.170.144/28  
 2a02:418:3001::/48
