@@ -15,7 +15,7 @@ For most typical build and test machines, we have the following checks in place:
 | Ping | Every 15 minutes | rta 200, 20% packet loss | rta 500, 60% packet loss |
 | Check RAM | Every 10 minutes | 15% free | 5% free |
 | **Check Timesync** | Every 15 minutes | Time not synchronized / service not running | Can't find required info |
-| **Check Package Manager** | Once a day | Critical Updates required | Any updates required |
+| **Check Package Manager** | Once a day  | Any updates required | Critical Updates required |
 
 The `check_ssh` check output defines if the host is considered connected to the Nagios Server. If this is critical, it can be assumed no other checks will work either.
 
