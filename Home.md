@@ -11,15 +11,12 @@ Welcome to the openjdk-infrastructure wiki!
 * [[External Services]]
 * [[Colocation]]
 * [[Bastillion]] setup docs
-* [[Ansible AWX]] setup docs. Also [[Grant users permissions to AWX]]
-* [[How to start server.js]] - obsolete with OpenShift
+* [[Ansible AWX]] setup docs.
 
 # Nagios Monitoring
 
 * [[Overview of Nagios]]
-* [[Nagios Client Agent configuration]]
-* [[Clients that have ICMP Disabled]]
-* [[Additional steps for Firewalled or Nat'ed Nagios Clients]]
+* [[Manual Setup of a Nagios Monitored Machine]]
 * [[Monitoring Additional Services]]
 
 # "How-to" guides
