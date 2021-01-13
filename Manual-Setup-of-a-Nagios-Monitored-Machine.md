@@ -65,6 +65,10 @@ define hostgroup{
 
 After the server definition has been made and host groups updated, syntax and the rest of the nagios config files can be checked by running `/usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg`. If no errors have occurred, the service can be restarted by running `sudo service nagios restart` and the machine should be viewable at [nagios.adoptopenjdk.net](https://nagios.adoptopenjdk.net/nagios/)
 
+### Clients with ICMP Disabled:
+
+If a client has ICMP disabled and they are 'unpingable', the `ping` service will have to be removed from the server definition.
+
 ## Additional Steps for Firewalled or NAT'd clients:
 
 There are additional steps that are required to complete the client setup for systems where the Nagios server doesn't have direct access to them. (NAT'ed, Firewalled, etc) The following steps will configure a Reverse SSH Tunnel from the client system to the Nagios server allowing it to monitor the client across the tunnel. These steps assume the `Client Configuration` section has been completed.
