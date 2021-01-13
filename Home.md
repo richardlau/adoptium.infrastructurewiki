@@ -17,7 +17,7 @@ Welcome to the openjdk-infrastructure wiki!
 
 * [[Overview of Nagios]]
 * [[Manual Setup of a Nagios Monitored Machine]]
-* [[Monitoring Additional Services]]
+* [[Nagios: Monitoring Additional Services]]
 
 # "How-to" guides
 
