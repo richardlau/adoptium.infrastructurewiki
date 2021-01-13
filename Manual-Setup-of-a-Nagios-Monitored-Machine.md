@@ -65,6 +65,8 @@ define hostgroup{
 
 After the server definition has been made and host groups updated, syntax and the rest of the nagios config files can be checked by running `/usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg`. If no errors have occurred, the service can be restarted by running `sudo service nagios restart` and the machine should be viewable at [nagios.adoptopenjdk.net](https://nagios.adoptopenjdk.net/nagios/)
 
+**Note:** More information about additional services such as `check_http`, the package manager services, and `passwd expiry` can be found in the [[Nagios: Monitoring Additional Services]] page.
+
 ### Clients with ICMP Disabled:
 
 If a client has ICMP disabled and they are 'unpingable', the `ping` service will have to be removed from the server definition.
