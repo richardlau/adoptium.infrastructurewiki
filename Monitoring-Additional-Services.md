@@ -1,6 +1,8 @@
-#### Monitoring Additional Services: Client specific services
+## Monitoring Additional Services: Client specific services
 
-##### Web Services:
+Below are additional service definitions that can be added to server definitions to monitor more aspects of the machine.
+
+### Web Services:
 check_http vs https
 ``` bash
 define service{
@@ -18,9 +20,14 @@ define service {
         check_command                   check_https_url
         }
 ```
+### Package Update Services:
 
-##### apt-get
-###### apt is a built in plugin that comes preinstalled 
+These services are focused on monitoring packages that need updating, critical or otherwise. Many of these modules can be found [here](https://github.com/AdoptOpenJDK/openjdk-infrastructure/tree/master/ansible/playbooks/AdoptOpenJDK_Unix_Playbook/roles/Nagios_Plugins/tasks/additional_plugins)
+
+**apt-get**
+
+apt is a built-in plugin that comes preinstalled as part of the `nagios_plugins` package. 
+
 ###### Define the service on the Nagios server
 ``` bash
 define service{
@@ -32,17 +39,18 @@ define service{
         }
 ```
 
-##### YUM
-###### Ensure the yum Security plugin is installed - 'yum install yum-security' (RHEL5) or 'yum install yum-plugin-security' (RHEL6)
-###### Edit the sudoers file and allow Nagios to use yum while restricting it to check-update only.
+**YUM**
+
+Edit the sudoers file and allow Nagios to use yum while restricting it to check-update only.
 ``` bash
 nagios ALL = NOPASSWD: /usr/bin/yum --security check-update
 ```
-###### Download the check_yum plugin and make it executable
+Download the check_yum plugin and make it executable
 ``` bash
-cd /usr/local/nagios/libexec && wget https://raw.githubusercontent.com/AdoptOpenJDK/openjdk-tests/master/Build/ansible/playbooks/nagios/additional_plugins/check_yum && chmod +x check_yum
+cd /usr/local/nagios/libexec && wget https://raw.githubusercontent.com/AdoptOpenJDK/openjdk-infrastructure/master/ansible/playbooks/AdoptOpenJDK_Unix_Playbook/roles/Nagios_Plugins/tasks/additional_plugins/check_yum && chmod +x check_yum
 ```
-###### Define the service on the Nagios server
+
+Define the service on the Nagios server
 ``` bash
 define service{
         use                             generic-service
@@ -53,33 +61,36 @@ define service{
         notifications_enabled   0
         }
 ```
-##### DNF
-###### Requires that ruby is installed on the machine
-###### Download [check_dnf.rb](https://github.com/nikkolasg/check_dnf/blob/master/check_dnf.rb) to the machine in its plugin folder /usr/local/nagios/libexec.
-###### Rename it to check_dnf and make it executable by nagios (chmod +x check_dnf)
-###### Specify the *USERNAME* to login as and which ssh key to use
-###### Ensure the key has been added to the Nagios server and the nagio user has access to it
+**DNF**
+
+Note: Requires that ruby is installed on the machine.
+Download the [check_dnf.rb](https://github.com/nikkolasg/check_dnf/blob/master/check_dnf.rb) module and make it executable
+```bash
+cd /usr/local/nagios/libexec && wget https://raw.githubusercontent.com/nikkolasg/check_dnf/master/check_dnf.rb -O check_dnf && chmod +x check_dnf
+```
+Define the service on the Nagios Server
 ``` bash
 define service{
         use                             generic-service
         host_name                       HOSTNAME
         check_period			once-a-day-at-8
         service_description             Updates Required - DNF
-        check_command                   check_ssh_dnf!*USERNAME*!/usr/local/nagios/etc/ssh_keys/*NAMEofKEY.key
+        check_command                   check_by_ssh!/usr/local/nagios/libexec/check_dnf
         notifications_enabled   0
         }
 ```
-##### Zypper
-###### Edit the sudoers file and allow nagios to use zypper while restricting it to list-patches only.
+**Zypper**
+
+Edit the sudoers file and allow nagios to use zypper while restricting it to list-patches only.
 ``` bash
 nagios ALL = NOPASSWD: /usr/bin/zypper list-patches
 ```
-###### Download the check_yum plugin and make it executable
+Download the check_yum plugin and make it executable
 ``` bash
-cd /usr/local/nagios/libexec && wget https://raw.githubusercontent.com/AdoptOpenJDK/openjdk-tests/master/Build/ansible/playbooks/nagios/additional_plugins/check_zypper && chmod +x check_zypper
+cd /usr/local/nagios/libexec &&https://raw.githubusercontent.com/AdoptOpenJDK/openjdk-infrastructure/master/ansible/playbooks/AdoptOpenJDK_Unix_Playbook/roles/Nagios_Plugins/tasks/additional_plugins/check_zypper && chmod +x check_zypper
 ```
 
-###### Define the service on the Nagios server
+Define the service on the Nagios server
 ``` bash
 define service{
         use                             generic-service
@@ -91,15 +102,14 @@ define service{
         }
 ```
 
-##### PKG (FreeBSD)
+**PKG (FreeBSD)**
+
+Download the check_pkg plugin and make it executable
 ``` bash
-```
-###### Download the check_pkg plugin and make it executable
-``` bash
-cd /usr/local/nagios/libexec && wget https://raw.githubusercontent.com/AdoptOpenJDK/openjdk-tests/master/Build/ansible/playbooks/nagios/additional_plugins/check_pkg && chmod +x check_pkg
+cd /usr/local/nagios/libexec && wget https://raw.githubusercontent.com/AdoptOpenJDK/openjdk-infrastructure/master/ansible/playbooks/AdoptOpenJDK_Unix_Playbook/roles/Nagios_Plugins/tasks/additional_plugins/check_pkg && chmod +x check_pkg
 ```
 
-###### Define the service on the Nagios server
+Define the service on the Nagios server
 ``` bash
 define service{
         use                             generic-service
@@ -110,12 +120,12 @@ define service{
         notifications_enabled   0
         }
 ```
-##### softwareupdate - MAC
-###### Download the check_sw_up plugin and make it executable
+**softwareupdate (macOS)**
+Download the check_sw_up plugin and make it executable
 ``` bash
-cd /usr/local/nagios/libexec && wget https://raw.githubusercontent.com/AdoptOpenJDK/openjdk-tests/master/Build/ansible/playbooks/nagios/additional_plugins/check_sw_up && chmod +x check_sw_up
+cd /usr/local/nagios/libexec && wget https://raw.githubusercontent.com/AdoptOpenJDK/openjdk-infrastructure/master/ansible/playbooks/AdoptOpenJDK_Unix_Playbook/roles/Nagios_Plugins/tasks/additional_plugins/check_sw_up && chmod +x check_sw_up
 ```
-###### Define the service on the Nagios server
+Define the service on the Nagios server
 ``` bash
 define service{
         use                             local-service
@@ -127,12 +137,13 @@ define service{
         }
 
 ```
-##### Account Passwd Expiry
-###### Edit the sudoers file using 'visudo' and allow nagios to execute the chage command
+
+### Account Passwd Expiry
+Edit the sudoers file using 'visudo' and allow nagios to execute the chage command
 ``` bash
 nagios ALL = NOPASSWD: /usr/bin/chage -l * 
 ```
-###### Download and configure plugin
+Download and configure plugin
 ``` bash
 # Ubuntu: 
 apt-get install libmonitoring-plugin-perl libnagios-object-perl libnagios-plugin-perl
@@ -144,12 +155,9 @@ zypper install perl-Nagios-Plugin
 dnf -y install perl-Nagios-Plugin
 # Edit the sudoers file and comment out "Defaults    requiretty"
 ```
+Download the plugin and make executable.
 ``` bash
-# OpenSuse: 
-zypper -y install perl-Nagios-Plugin
-```
-``` bash
-cd /usr/local/nagios/libexec && wget https://raw.githubusercontent.com/elio78/nagios/master/check_passwd_expiration.pl && mv check_passwd_expiration.pl check_passwd && chmod +x check_passwd
+cd /usr/local/nagios/libexec && wget https://raw.githubusercontent.com/elio78/nagios/master/check_passwd_expiration.pl -O check_passwd && chmod +x check_passwd
 vi /usr/local/nagios/libexec/check_passwd
 # replace line 1 with 
 #!/usr/bin/perl -w
@@ -160,7 +168,7 @@ no warnings 'all';
 su - nagios
 /usr/local/nagios/libexec/check_passwd
 ```
-
+Define the service on the Nagios server
 ``` bash
 define service{
         use                             generic-service
