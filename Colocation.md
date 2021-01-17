@@ -1,4 +1,3 @@
-## Zurich, Switzerland
 Provided by [Nine](https://www.nine.ch), hosted at [Colozüri](https://www.colozueri.ch/).
 
 Overview:
@@ -7,7 +6,7 @@ Overview:
 * Redundant power bars
 * 1 kW power budget
 
-### Support, Remote Hands
+## Support, Remote Hands
 
 People that are elegible to open support requests and request remote hands:
 
@@ -18,7 +17,7 @@ People that are elegible to open support requests and request remote hands:
 * [Stewart Addison](https://github.com/sxa)
 * [Will Parker](https://github.com/willsparker)
 
-### Installed Equipment
+## Installed Equipment
 
 Network, management:
 
@@ -35,15 +34,15 @@ Servers:
 * ER12A BitScope Edge Rack incl. 12 Raspberry Pis 4B, 8GB, 120 GB SSD (purchased from BitScope on 2020-10-16)
 * ER12A BitScope Edge Rack incl. 12 Raspberry Pis 4B, 8GB, 120 GB SSD (purchased from BitScope on 2020-10-16)
 
-### Remote Access
+## Remote Access
 
 The firewalls are accessible via our bastion host ([use it as a SOCKS proxy](https://ma.ttias.be/socks-proxy-linux-ssh-bypass-content-filters/)) or internally via VPN. 
 
-### Network Setup
+## Network Setup
 
 The uplink is configured with active/passive high-availability over two perimeter networks (1 and 2, see below). 1 is the active, 2 the passive link. If one link goes down, traffic flows over the other link.
 
-#### Perimeter Network 1
+### Perimeter Network 1
 
 5.148.175.184/30  
 Uplink IP: 5.148.175.185  
@@ -53,7 +52,7 @@ Our (gateway/firewall) IP: 5.148.175.186
 Uplink IP: 2a02:418:39aa:2::1  
 Our (gateway/firewall) IP: 2a02:418:39aa:2::2
 
-#### Perimeter Network 2
+### Perimeter Network 2
 
 5.148.175.188/30  
 Uplink IP: 5.148.175.189  
@@ -63,12 +62,12 @@ Our (gateway/firewall) IP: 5.148.175.190
 Uplink IP: 2a02:418:39aa:2::1  
 Our (gateway/firewall) IP: 2a02:418:39aa:7::2
 
-#### Public IP Ranges
+### Public IP Ranges
 
 5.148.170.144/28  
 2a02:418:3001::/48
 
-#### Management Network
+### Management Network
 
 10.0.10.0/24 (VLAN 10)
 
@@ -80,23 +79,23 @@ x.4 Switch
 x.5 KVM switch 01
 ```
 
-### VPN
+## VPN
 
 VPN is required to manage or access servers and other equipments. We use OpenVPN (SSL/TLS + User Auth with TOTP enabled) and have 3 different networks.
 
-#### vpnstaff (port 1194)
+### vpnstaff (port 1194)
 
 Provides full access to all equipment except TCK infrastructure. For TCK infrastructure, only access to lights-out management is provided. Limited to AdoptOpenJDK infrastructure team.
 
-#### vpnguest (port 1195)
+### vpnguest (port 1195)
 
 Provides access to build and test networks (for debugging builds, tests, ...).
 
-#### vpntck (port 1196)
+### vpntck (port 1196)
 
 Provides access to TCK infrastructure. **Limited to EMO staff and people that have signed a three-way OCTLA with Eclipse and Oracle**.
 
-### Notes
+## Notes
 
 VPN:
 
