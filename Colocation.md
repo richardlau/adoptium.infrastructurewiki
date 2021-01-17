@@ -35,6 +35,10 @@ Servers:
 * ER12A BitScope Edge Rack incl. 12 Raspberry Pis 4B, 8GB, 120 GB SSD (purchased from BitScope on 2020-10-16)
 * ER12A BitScope Edge Rack incl. 12 Raspberry Pis 4B, 8GB, 120 GB SSD (purchased from BitScope on 2020-10-16)
 
+### Remote Access
+
+The firewalls are accessible via our bastion host ([use it as a SOCKS proxy](https://ma.ttias.be/socks-proxy-linux-ssh-bypass-content-filters/)) or internally via VPN. 
+
 ### Network Setup
 
 The uplink is configured with active/passive high-availability over two perimeter networks (1 and 2, see below). 1 is the active, 2 the passive link. If one link goes down, traffic flows over the other link.
@@ -75,3 +79,26 @@ x.3 Firewall 02
 x.4 Switch
 x.5 KVM switch 01
 ```
+
+### VPN
+
+VPN is required to manage or access servers and other equipments. We use OpenVPN (SSL/TLS + User Auth with TOTP enabled) and have 3 different networks.
+
+#### vpnstaff (port 1194)
+
+Provides full access to all equipment except TCK infrastructure. For TCK infrastructure, only access to lights-out management is provided. Limited to AdoptOpenJDK infrastructure team.
+
+#### vpnguest (port 1195)
+
+Provides access to build and test networks (for debugging builds, tests, ...).
+
+#### vpntck (port 1196)
+
+Provides access to TCK infrastructure. **Limited to EMO staff and people that have signed a three-way OCTLA with Eclipse and Oracle**.
+
+### Notes
+
+VPN:
+
+* OpenVPN was chosen because it's the most flexible and recommended option for OPNSense (Jan 2021).
+* We have one OpenVPN instance per user group because (again) it's the most flexible option we found during the setup (Jan 2021). The approach outlined in the [official How To Guide](https://openvpn.net/community-resources/how-to/#configuring-client-specific-rules-and-access-policies) works with client-specific rules. Those rules are specific for a single client, require a separate network per user, and therefore do not scale with a larger number of users.
