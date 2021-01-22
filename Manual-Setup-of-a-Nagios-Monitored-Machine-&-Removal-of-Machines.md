@@ -53,7 +53,7 @@ There are several items that will need to be changed in these template files, to
 
 Note: The `Add by Ansible` message is set when the machine has automatically been added via Ansible. When manually setting up machines, the description may be more important. i.e: `ci.adoptopenjdk.net`'s message is `AdoptOpenJDK - Jenkins server`.
 
-When adding a new machine to be monitored, it's important to add it to the correct hostgroup in the `/usr/local/nagios/etc/objects/hostgroups.cfg` file. If the machine is part of an already defined hostgroup (i.e. `spearhead` , `ibmcloud`, `marist`, etc), then all that's required is to add the hostname to the group's `members` field. If the machine is a new hostgroup / from a new provider, the hostgroup needs to be created, with the following template
+When adding a new machine to be monitored, it's important to add it to the correct hostgroup in the `/usr/local/nagios/etc/objects/hostgroups.cfg` file. If the machine is part of an already defined hostgroup (i.e. `spearhead` , `ibmcloud`, `marist`, etc), then all that's required is to add the hostname to the group's `members` field. If the machine is a new hostgroup / from a new provider, the hostgroup needs to be created, with the following template:
 
 ```bash
 define hostgroup{
@@ -105,3 +105,26 @@ service nagios restart
 ````
 
 If all went well, the machine should be viewable at [nagios.adoptopenjdk.net](https://nagios.adoptopenjdk.net/nagios/)
+
+# Removing Machines from Nagios:
+
+If machines that are being monitored by Nagios are being decommissioned, they will have to be manually removed from Nagios. 
+
+**Note: Machines shouldn't be removed from Nagios, until they have been removed from `inventory.yml` / have a PR to remove them from `inventory.yml`.**
+
+On the Nagios Server, as the root user:
+```bash
+# Remove the server definition
+rm /usr/local/nagios/etc/servers/*HOSTNAME*.cfg
+``` 
+
+When removing a machine, the `/usr/local/nagios/etc/objects/hostgroups.cfg` file needs to be updated, to remove the machine. This is a case of finding the hostgroup of the machine (i.e. `spearhead`,`ibmcloud`,`marist`) and removing the hostname from the `members` field.
+
+Once this is done, the Nagios configuration can be checked, and restarted if all is well:
+```bash
+/usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
+# If all is good restart nagios
+service nagios restart
+```
+
+If you don't have access to the Nagios server to do these steps, please raise an issue with `Nagios:` as a prefix, in the title. 
