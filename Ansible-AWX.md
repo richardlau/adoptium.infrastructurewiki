@@ -94,6 +94,10 @@ Templates are the entities that do the work of deploying playbooks. We create on
 
 The template can also have a schedule associated with it if you want to run it periodically, or you can run it manually by clicking the rocket ship icon next to it in the list.
 
+# Vendor_Files
+
+Some of our roles expect to be able to access the `/Vendor_Files` directory for some private information (alternatively it can be sourced from the `secrets` repo for those who have access. For the purposes of AWX, the `/Vendor_Files` directory should be located within the `awx_task` container - use `docker cp` if you need to update something within the container
+
 # Backups
 
 Three options:
