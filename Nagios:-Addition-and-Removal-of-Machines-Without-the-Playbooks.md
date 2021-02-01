@@ -112,19 +112,21 @@ If machines that are being monitored by Nagios are being decommissioned, they wi
 
 **Note: Machines shouldn't be removed from Nagios, until they have been removed from `inventory.yml` / have a PR to remove them from `inventory.yml`.**
 
-On the Nagios Server, as the root user:
+On the Nagios Server, as the Nagios user:
 ```bash
 # Remove the server definition
 rm /usr/local/nagios/etc/servers/*HOSTNAME*.cfg
-``` 
+rm: remove write-protected regular file <*HOSTNAME*.cfg>? yes
+```
 
 When removing a machine, the `/usr/local/nagios/etc/objects/hostgroups.cfg` file needs to be updated, to remove the machine. This is a case of finding the hostgroup of the machine (i.e. `spearhead`,`ibmcloud`,`marist`) and removing the hostname from the `members` field.
 
 Once this is done, the Nagios configuration can be checked, and restarted if all is well:
 ```bash
+# Alternatively `check_nagios` has been aliased to this command
 /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
 # If all is good restart nagios
-service nagios restart
+sudo /etc/init.d/nagios restart
 ```
 
 If you don't have access to the Nagios server to do these steps, please raise an issue with `Nagios:` as a prefix, in the title. 
