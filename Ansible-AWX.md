@@ -69,7 +69,7 @@ Once the inventory source is saved and refreshed (click the `recycle` icon in th
 
 ## CREDENTIALS
 
-Credentials allow AWX to connect to other systems. We will need at least one ssh credential to allow it to connect to the machines which it is going to deploy onto (this will be put on the machines via Bastillion). Create the credential with the following parameters:
+Credentials allow AWX to connect to other systems. We will need at least one ssh credential to allow it to connect to the UNIX-based machines which it is going to deploy onto (this will be put on the machines via Bastillion). Create the credential with the following parameters:
 
 - NAME: `ssh admin key`
 - DESCRIPTION: log into machines over ssh
@@ -78,6 +78,15 @@ Credentials allow AWX to connect to other systems. We will need at least one ssh
 - USERNAME: root
 - SSH PRIVATE KEY: <Obviously this is private!>
 - PRIVATE KEY PASSPHRASE: <This is private too!>
+
+For Windows machiens we need to authenticate with a password. Since our passwords are different across each machine we create a credential which will prompt on each template deployment as follows:
+
+- NAME: `Windows credentia`
+- DESCRIPTION: Select pasword on launch
+- ORGANISATION: AdoptOpenJDK
+- CREDENTIAL TYPE: Machine
+- USERNAME: Administrator
+- PASSWORD: Blank with `Prompt on launch` checked.
 
 ## TEMPLATES
 
@@ -89,10 +98,22 @@ Templates are the entities that do the work of deploying playbooks. We create on
 - PROJECT: adoptopenjdk/openjdk-infrastructure
 - PLAYBOOK: ansible/playbooks/AdoptOpenJDK_Unix_Playbook/main.yml
 - CREDENTIALS: `ssh admin key`
-- SKIP TAGS: `adoptopenjdk` (for now)
+- SKIP TAGS: `nagios_master_config` `nagios_tunnel` (for now)
 - EXTRA_VARIABLES: `ansible_ssh_user: root`
 
 The template can also have a schedule associated with it if you want to run it periodically, or you can run it manually by clicking the rocket ship icon next to it in the list.
+
+An equivalent template `Deploy AIX template` has the same values other then `PLAYBOOK` is set to `ansible/playbooks/AdopyOpenJDK_AIX_Playbook/main.yml`
+
+For Windows deployments, we have the following template defined:
+
+- NAME: Deploy Windows playbook
+- JOB TYPE: Run
+- INVENTORY: Dynamic Inventory from Github
+- PROJECT: AdoptOpenJDK/openjdk-infrastructure
+- PLAYBOOK: ansible/playbooks/AdoptOpenJDK_Windows_Playbook/main.yml
+- CREDENTIALS: `Windows credential`
+- SKIP TAGS: `basic_config` (for now)
 
 # Vendor_Files
 
