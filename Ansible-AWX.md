@@ -19,6 +19,7 @@ If you are going to be running via a cloudflare proxy, modify `awx/installer/rol
 - **Needed due to AWX bug:** Wait 2½ minutes then run the playbook again
 - `docker logs -f awx_task` (Don't skip this - it should have a message with `127.0.0.1 | SUCCESS` fairly quickly then after five minutes or so)
 - If anything goes wrong - clear it out `docker stop awx_task awx_web awx_postgres awx_redis` then `docker rm awx_task awx_web awx_postgres awx_redis` Wipe out `~awx/.awx` (will likely need root) and re-run the playbook after fixing anything obvious :-)
+- If we still need to connect to any macos 10.10 boxes you [will need to enable](https://github.com/AdoptOpenJDK/openjdk-infrastructure/issues/1910#issuecomment-797628624) the `aes128-ctr` Cipher in the `/etc/ssh/ssh_config` of the `awx_task` container
 
 Once ansible is running, connect to it on the standard SSL port (443)
 
