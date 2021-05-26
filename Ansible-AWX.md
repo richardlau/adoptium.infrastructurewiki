@@ -16,6 +16,9 @@ As the new `awx` user:
 If you are going to be running via a cloudflare proxy, modify `awx/installer/roles/local_docker/templates/nginx.conf.j2` to comment out the `Content-Security-Policy` header, otherwise you will fall foul of HSTS violations.
 
 - `ansible-playbook -i inventory install.yml`
+
+You may receive a deprecation error concerning the `docker_service` module used in `roles/local_docker/tasks/upgrade_postgres.yml` causing the playbook to come to a halt. In this file, simply replace `docker_service:` with `docker_compose:` and re run the playbook.
+
 - **Needed due to AWX bug:** Wait 2½ minutes then run the playbook again
 - `docker logs -f awx_task` (Don't skip this - it should have a message with `127.0.0.1 | SUCCESS` fairly quickly then after five minutes or so)
 - If anything goes wrong - clear it out `docker stop awx_task awx_web awx_postgres awx_redis` then `docker rm awx_task awx_web awx_postgres awx_redis` Wipe out `~awx/.awx` (will likely need root) and re-run the playbook after fixing anything obvious :-)
