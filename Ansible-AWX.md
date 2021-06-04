@@ -7,8 +7,8 @@
 As the new `awx` user:
 
 - `git clone https://github.com/ansible/awx -b 15.0.1` (latest branch at time of writing)
-- `openssl req -x509  -nodes -days 1000 -newkey rsa:4096  -keyout server.key -out server.crt  -subj "/C=GB/ST=UK/L=London/O=AdoptOpenJDK/CN=awx.adoptopenjdk.net"`
-- Edit `awx/installer/inventory` and update `ssl_certificate` and `ssl_certificate_key` to the full path to the two files created from the openssl command above. Also change `admin_password` to something other than `password` and also change `pg_password`
+- (If you have your own SSL certificate for the web server you can bypass this self-signed certificate generation step - since the adopt one is fronted by CloudFlare it isn't a problem for us to use this one): `openssl req -x509  -nodes -days 1000 -newkey rsa:4096  -keyout server.key -out server.crt  -subj "/C=GB/ST=UK/L=London/O=AdoptOpenJDK/CN=awx.adoptopenjdk.net"`
+- Edit `awx/installer/inventory` and update `ssl_certificate` and `ssl_certificate_key` to the full path to the two files created from the openssl command above (or ones from your own certificate). Also change `admin_password` to something other than `password` and also change `pg_password`
 - `export PATH=$HOME/.local/bin:$PATH`
 - `pip3 install docker-compose ansible` (This will take a few minutes)
 - `cd awx/installer`
