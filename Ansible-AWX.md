@@ -168,8 +168,8 @@ File "/var/lib/awx/venv/awx/lib/python3.6/site-packages/awx/main/management/comm
 TypeError: '<' not supported between instances of 'str' and 'int'
 ```
 
-If so, go back into the `awx_task` container. Look for the `get_base_args()` method.
-Locate this line within that method
+If so, go back into the `awx_task` container. Open up `/var/lib/awx/venv/awx/lib/python3.6/site-packages/awx/main/management/commands/inventory_import.py`
+Look for the `get_base_args()` method. Locate this line within that method
 
 `ansible_version = _get_ansible_version(ansible_inventory_path[:-len('-inventory')])`
 
