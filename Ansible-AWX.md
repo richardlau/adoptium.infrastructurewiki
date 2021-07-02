@@ -151,3 +151,28 @@ If this doesn't work, you can try uninstalling and reinstalling Ansible in the d
 `pip3 install ansible`
 
 This will reinstall Ansible to the latest version
+
+**Note:**
+
+The update to a later Ansible version may cause an unexpected failure when you try to sync your inventory (this may not affect later versions of AWX)
+
+While syncing your inventory, you may hit this error
+
+```
+File "/var/lib/awx/venv/awx/lib/python3.6/site-packages/awx/main/management/commands/inventory_import.py", line 142, in get_base_args
+    if this_version >= Version('2.5'):
+  File "/usr/lib64/python3.6/distutils/version.py", line 70, in __ge__
+    c = self._cmp(other)
+  File "/usr/lib64/python3.6/distutils/version.py", line 337, in _cmp
+    if self.version < other.version:
+TypeError: '<' not supported between instances of 'str' and 'int'
+```
+
+If so, go back into the `awx_task` container. Look for the `get_base_args()` method.
+Locate this line within that method
+
+`ansible_version = _get_ansible_version(ansible_inventory_path[:-len('-inventory')])`
+
+Comment it out and replace it with 
+
+`ansible_version = "2.11.1"`
