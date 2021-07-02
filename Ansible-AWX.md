@@ -147,4 +147,5 @@ You can specify a version of Ansible to upgrade to by using
 If this doesn't work, you can try uninstalling and reinstalling Ansible in the docker container
 
 `pip3 uninstall ansible`
+
 `pip3 install ansible`
