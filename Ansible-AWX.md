@@ -129,3 +129,22 @@ Three options:
 - Back up the docker containers
 - Using `./tower-cli receive --all -h localhost -u admin -p ASK --insecure` (`pip3 install ansible_tower_cli` if you don't have it)
 - Or `./awx --conf.insecure export` (after pip3 install awxkit`)
+
+# Update Ansible on the AWX server
+
+Enter the `awx_task` docker container
+
+`docker exec -it awx_task /bin/bash`
+
+The version of Ansible used by the AWX server is the version of Ansible installed in this container. Updating Ansible is as easy on the AWX server as it is anywhere else.
+
+`pip3 install --upgrade ansible`
+
+You can specify a version of Ansible to upgrade to by using
+
+`pip3 install --upgrade "ansible=x.x.x"`
+
+If this doesn't work, you can try uninstalling and reinstalling Ansible in the docker container
+
+`pip3 uninstall ansible`
+`pip3 install ansible`
