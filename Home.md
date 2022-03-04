@@ -26,4 +26,5 @@ Welcome to the openjdk-infrastructure wiki!
 * [[How to contribute to AdoptOpenJDK Infrastructure]]
 * [[Update the website certificate on ci.adoptopenjdk.net]]
 * [[Adding a new machine]]
+* [[Minimal machine setup required for running tests]]
 
