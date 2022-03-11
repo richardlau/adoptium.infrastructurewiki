@@ -57,14 +57,14 @@ The project connects AWX with a github repository. Multiple ones can be created 
 Inventories define the set of machines that we run against. For the openjdk-infrastructure repository the master list of machines is stored in the `ansible/inventory.yml` file. This is not in the format which AWX expects, so we another script to parse it. Create an inventory as follows:
 
 - NAME: Dynamic inventory from github
-- ORGANISATION: AdoptOpenJDK
+- ORGANISATION: Adoptium (Was AdoptOpenJDK)
 
 The save, and under the `SOURCES` tab you will need to create a new entry, which I have called `Dynamic inventory source` which specifies how to populate the inventory. Use the following settings:
 
 - NAME: Dynamic inventory source
 - SOURCE: Sourced from a Project
-- PROJECT: adoptopenjdk/openjdk-infrastructure
-- INVENTORY FILE: `ansible/plugins/adoptopenjdk_yaml.py`
+- PROJECT: adoptium/infrastructure (Was adoptopenjdk/openjdk-infrastructure)
+- INVENTORY FILE: `ansible/plugins/inventory/adoptopenjdk_yaml.py`
 - UPDATE OPTIONS: `OVERWRITE` and `OVERWRITE_VARIABLES`
 
 You can also use the `SCHEDULES` tab within the source definition to tell AWX to resync periodically with github, or you can re-run when you update the entries.
