@@ -71,6 +71,10 @@ You can also use the `SCHEDULES` tab within the source definition to tell AWX to
 
 Once the inventory source is saved and refreshed (click the `recycle` icon in the actions for the source) you should see the `GROUPS` an `HOSTS` tabs of the inventory populated with all of the machines. `GROUPS` will have sections for `build`, `docker`, `infrastructure` and `test` (at the time of writing) and `HOSTS` will show each system as well as the group they are in. Each host can be enabled or disabled using the switches to the left of the hostname.
 
+## PERMISSIONS
+
+We now need to give the AdoptOpenJDK team access to the projects listed above. To do this, go to Teams -> AdoptOpenJDK -> Permissions and click the green + icon. Select all of our newly created templates and give "Admin" privileges to the team. Then do the same for the inventories.
+
 ## CREDENTIALS
 
 Credentials allow AWX to connect to other systems. We will need at least one ssh credential to allow it to connect to the UNIX-based machines which it is going to deploy onto (this will be put on the machines via Bastillion). Create the credential with the following parameters:
