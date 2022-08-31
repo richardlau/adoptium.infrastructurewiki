@@ -125,9 +125,7 @@ For Windows deployments, we have the following template defined:
 
 ## Schedules
 
-Schedules are used within AWX to run particular jobs or tasks on a recurring basis.
-
-
+Schedules are used within AWX to run particular jobs or tasks on a recurring basis. The existing scheduled jobs are used to automate clean-up tasks, and perform a daily automated synchronisation of the ansible inventory ([Link](https://awx2.adoptopenjdk.net/#/inventories/inventory/2/inventory_sources/edit/9/schedules/6?inventory_search=page_size:20;order_by:name&schedule_search=page_size:20;order_by:name)).
 
 # Vendor_Files
 
