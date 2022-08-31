@@ -123,6 +123,12 @@ For Windows deployments, we have the following template defined:
 - CREDENTIALS: `Windows credential`
 - SKIP TAGS: `basic_config` (for now)
 
+## Schedules
+
+Schedules are used within AWX to run particular jobs or tasks on a recurring basis.
+
+
+
 # Vendor_Files
 
 Some of our roles expect to be able to access the `/Vendor_Files` directory for some private information (alternatively it can be sourced from the `secrets` repo for those who have access. For the purposes of AWX, the `/Vendor_Files` directory should be located within the `awx_task` container - use `docker cp` if you need to update something within the container
