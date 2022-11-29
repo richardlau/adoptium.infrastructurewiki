@@ -6,7 +6,7 @@ Nagios is a configurable server monitoring tool, monitoring elements such as con
 
 ## Project Timeline
 
-### Before 5th December;
+### Before 5th December
 - Attending community calls, reading project documentation, updating local instances, contributing to the community issues and making pull requests
 
 ### Month 1
