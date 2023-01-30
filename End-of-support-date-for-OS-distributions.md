@@ -7,6 +7,9 @@ This page lists the end-of-support dates for different distributions which we us
 - Upstream details: https://ubuntu.com/about/release-cycle | https://ubuntu.com/kernel/lifecycle
 - Show info `cat /etc/lsb-release && uname -r && dpkg -l | grep libc-bin`
 
+## Debian
+- Upstream details: https://wiki.debian.org/LTS
+
 Version | Kernel | glibc | release date | end of support | extended support
 --- | --- | --- | --- | --- | ---
 18.04 | 4.15 | 2.27 | 2018-04 | 2023-03 | 2028-03
